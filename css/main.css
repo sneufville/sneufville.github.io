@@ -1,0 +1,419 @@
+/********f************
+    
+	Project 4 Website Development
+	Name: Simon Neufville
+	Date: November 27, 2023
+	Description: Demonstrates an understanding of using all concepts learned from WEBD-1007 to design and build a website.
+  Icons used are sourced from uxwing (refer to license information: https://uxwing.com/license/). Images are from unsplash.com (refer to license information: https://unsplash.com/license)
+
+*********************/
+
+/* resets */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nova Round', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 300;
+}
+
+/* content styles */
+p {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+p, span, a, b, i {
+  font-family: 'Lato', sans-serif;
+}
+
+.divider {
+  color:  #999;
+  margin-bottom: 1rem;
+}
+
+/* Site Content */
+#siteContent {
+  padding: 1.5rem 1.25rem;
+  /* width: 100%; */
+}
+
+#siteContent > section {
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+#siteContent > section > p {
+  margin-bottom: 0.75rem;
+}
+
+/* Site navigation styles */
+#riverSoftLogo {
+  color: #f5f5f5;
+  font-size: 1.25em;
+  text-decoration: none;
+}
+
+#riverSoftLogo span {
+  border: solid 1px #f5f5f5;
+  padding: 0.5rem;
+}
+
+#navContainer {
+  background-color: #023047;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+#siteNav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25rem;
+}
+
+#siteNav a {
+  margin-top: 0.5rem;
+}
+
+.navLink {
+  color: #f5f5f5;
+  font-size: 1.25rem;
+  margin: 0 0.75rem;
+  text-decoration: none;
+}
+
+.navLink img {
+  filter: invert(1);
+  height: 16px;
+  width: 16px;
+}
+
+.navLink:hover {
+  animation-duration: 250ms;
+  text-decoration: underline;
+}
+
+.navLink_Active {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.homeRow {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 4rem;
+}
+
+.homeRow_Content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 1rem;
+}
+
+#mainInfo img {
+  width: 90%;
+  border: solid 1px #023047;
+  margin: 0 auto;
+}
+
+.pageBanner {
+  background-color: #219ebc;
+  border-radius: 5px;
+  color: #f4f4f4;
+  font-size: 1.5rem;
+  padding: 0.75rem 1rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Site Header Styles */
+#siteHeader {
+  background-image: url('../images/headerBg.jpeg');
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  object-fit: cover;
+  height: 260px;
+  padding-bottom: 1.5rem; 
+  padding-left: 1.5rem;
+}
+
+#siteHeader > h1, #siteHeader > p {
+  background-color: #00000070;
+  color: #f5f5f5;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Services */
+
+#servicesContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  
+}
+
+.serviceContainer_Row {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.serviceCard {
+  border-radius: 5px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0.25rem;
+}
+
+.serviceCard_Title {
+  align-items: center;
+  background-color: #023047;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  padding: 0.75rem 0.5rem;
+}
+
+.serviceCard_Title img {
+  filter: invert(1);
+  height: 24px;
+  width: 24px;
+}
+
+.serviceCard_Title h2 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-left: 0.5rem;
+}
+
+.serviceCard_Content {
+  border: solid 1px #023047;
+  padding: 0.5rem;
+}
+
+.serviceCard_Content p {
+  margin-bottom: 0.5rem;
+}
+
+.techStack_Category {
+  margin-bottom: 0.5rem;
+}
+
+#contactForm {
+  background-color: #023047;
+  border-radius: 5px;
+  max-width: 100%;
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem;
+}
+
+#contactForm_Header {
+  background-color: #219ebc;
+  border-radius: 5px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.contactForm_Row {
+  border-bottom: solid 1px #219ebc;
+  color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.contactForm_Row > label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.contactForm_Row > input, select {
+  font-size: 1.0rem;
+  height: 36px;
+  padding-left: 0.5rem;
+}
+
+#contactForm_Message {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.contactForm_InputErrorContainer {
+  color: #fb8500;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 600;
+  padding-top: 0.25rem;
+}
+
+#contactForm_Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#contactForm_Footer button {
+  align-items: center;
+  border: none;
+  border-radius: 3px;
+  color: #f4f4f4;
+  display: flex;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+#contactForm_Footer button[type="reset"] {  
+  background-color: #999;
+  margin-right: 0.5rem;
+}
+
+#contactForm_Footer button[type="submit"] {
+  background-color: #fb8500;
+}
+
+#contactForm_Footer img {
+  filter: invert(1);
+  height: 16px;
+  margin-right: 0.25rem;
+  width: 16px;
+}
+
+#siteFooter {
+  background-color: #333;
+  color: #f5f5f5;
+  padding: 1.25rem;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#comingSoon_Image {
+  width: 90%;
+}
+
+.fullWidth {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messageContainer {
+  border: solid 1px;
+  padding: 1rem;
+}
+
+.messageSectionDetails {
+  border-bottom: solid 1px #023047;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.messageContainer p {
+  color: #666;
+}
+
+.messageContent {
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+.messageContainer span {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Media Queries */
+@media (min-width: 800px) {
+
+  .homeRow {
+    flex-direction: row;
+  }
+
+  #mainInfo img {
+    border: solid 1px #023047;
+    padding: 0.25rem;
+    width: 300px;
+  }
+
+  #siteContent > section {
+    margin: 0 auto 1rem auto;
+    padding: 0 0.5rem;
+    width: 75%;
+  }
+
+  #contactForm {
+    width: 75%;
+  }
+
+  #navContainer {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #siteNav {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 60px;
+    margin-top: 0;
+  }
+
+  #siteContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  #servicesContainer {
+    padding: 0 2rem;
+  }
+
+  .serviceCard_Content {
+    min-height: 131px;
+  }
+
+  .serviceContainer_Row {
+    flex-direction: row;
+  }
+
+  #siteFooter {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

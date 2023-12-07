@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiverSoft: About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div id="navContainer">
+      <a href="index.html" id="riverSoftLogo" title="RiverSoft Homepage">
+        <span>RS</span> RiverSoft
+      </a>
+      <nav id="siteNav">
+        <a href="index.html" title="RiverSoft Homepage" class="navLink" id="navLink_index">
+          <img src="images/home-icon.png" role="none" />
+          Home
+        </a>
+        <a href="services.html" class="navLink" id="navLink_services" title="RiverSoft services">
+          <img src="images/tools-icon.png" role="none" />
+          Services
+        </a>
+        <a href="projects.html" class="navLink" id="navLink_projects">
+          <img src="images/web-code-icon.png" role="none" />
+          Projects
+        </a>
+        <a href="about.html" class="navLink" id="navLink_about" title="About RiverSoft">
+          <img src="images/info-circle-icon.png" role="none" />
+          About
+        </a>
+      </nav>
+    </div>
+    <header id="siteHeader">
+      <h1>RiverSoft: About</h1>
+      <!-- <br> -->
+      <p>About our company</p>
+    </header>
+    <main id="siteContent">
+      <section>
+        <h2>About RiverSoft</h2>
+        <p>Our mission is to bring your next big idea to reality. We take care of all the technical bits so that you can focus on your idea.</p>
+      </section>
+      <section>
+        <h2>Our Story</h2>
+        <p>RiverSoft was created in 2023 to provide affordable and high quality software development solutions to everyone.</p>
+        <p>As we move forward, we will continue to evolve to meet the ever-changing software and web development landscape.</p>
+      </section>
+      <section>
+        <h2>Technologies & Tools we use</h2>
+        <p>We embrace modern technologies in our development process</p>
+        <div>
+          <div class="techStack_Category">
+            <h3>Frontend</h3>
+            <p>React</p>
+            <p>VueJS</p>
+            <p>HTML 5</p>
+          </div>
+          <div class="techStack_Category">
+            <h3>Backend</h3>
+            <p>Starlette</p>
+            <p>NodeJS</p>
+          </div>
+          <div class="techStack_Category">
+            <h3>UI/UX</h3>
+            <p>Figma</p>
+            <p>Adobe XD</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Contact Us</h2>
+        <blockquote>We would love to hear from you</blockquote>
+      </section>
+      <form id="contactForm" method="post" onsubmit="validateAndSubmitContact">
+        <div id="contactForm_Header">
+          <span>Have an awesome idea or you'd like to get in contact with us? Fill in and submit the form below</span>
+        </div>
+        <div class="contactForm_Row">
+          <label for="contactForm_Name">Full Name</label>
+          <input type="text" class="contactForm_Input" id="contactForm_Name" name="contactForm_Name" placeholder="Example: John Doe">
+          <div class="contactForm_InputErrorContainer" id="contactForm_NameError">
+            <span id="nameError_Required">* Name is required</span>
+          </div>
+        </div>
+        <div class="contactForm_Row">
+          <label for="contactForm_Email">Email Address</label>
+          <input type="email" class="contactForm_Input" id="contactForm_Email" name="contactForm_Email" placeholder="Example: user@example.ca">
+          <div class="contactForm_InputErrorContainer" id="contactForm_EmailError">
+            <span id="emailError_Format">* The email address entered is not of a valid format</span>
+          </div>
+        </div>
+        <div class="contactForm_Row">
+          <label for="contactForm_Phone">Phone Number</label>
+          <input type="tel" name="contactForm_Phone" id="contactForm_Phone" placeholder="Example: 204-555-1234">
+          <div class="contactForm_InputErrorContainer" id="contactForm_PhoneError">
+            <span id="phoneError_Format">* The phone number entered is not of a valid format: xxx-xxx-xxxx</span>
+          </div>
+        </div>
+        <div class="contactForm_Row">
+          <label for="contactForm_ContactType">What would you like to talk to us about?</label>
+          <select name="contactForm_ContactType" id="contactForm_ContactType" class="contactForm_Input">
+            <option value="generalInquiry">General Inquiry</option>
+            <option value="projectDiscussion">Project Discussion</option>
+            <option value="complaint">Complaint</option>
+          </select>
+        </div>
+        <div class="contactForm_Row">
+          <label for="contactForm_Message">Tell us the details</label>
+          <textarea name="contactForm_Message" id="contactForm_Message" cols="30" rows=4" class="contactForm_Textarea" placeholder="Tell us what you would like to message us about"></textarea>
+          <div class="contactForm_InputErrorContainer" id="contactForm_MessageError">
+            <span id="messageError_Required">* Your message should be at least 10 characters (without spaces)</span>
+          </div>
+        </div>
+        <div id="contactForm_Footer">
+          <button type="reset">
+            Reset Form
+          </button>
+          <button type="submit">
+            <img src="images/mail-icon.png" role="none" /> Submit Form
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer id="siteFooter">
+      <p>Not &copy; 2023 RiverSoft Software Development Company.<br><span>This project was created as part of the Fullstack Web Development Program at Red River College Polytechnic</span></p>
+    </footer>
+  </body>
+</html>
